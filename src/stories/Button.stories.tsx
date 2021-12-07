@@ -1,7 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Diet } from "../Static/Icons";
 
-import { Button } from './Button';
+import Button from '../components/Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,28 +15,27 @@ export default {
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} text="Click Me" />;
 
-export const Primary = Template.bind({});
+export const Contained = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: 'Button',
+Contained.args = {
+  outlined: false,
+  Icon: Diet,
+  text: "Click Me"
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+// export const Outlined = Template.bind({});
+// Outlined.args = {
+//   outlined: true
+// };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
+// export const IconButton = Template.bind({});
+// IconButton.args = {
+//   Icon: Diet
+// };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+// export const Disable = Template.bind({});
+// Disable.args = {
+//   disable: true
+// };
