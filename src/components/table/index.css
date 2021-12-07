@@ -1,0 +1,64 @@
+.table-root {
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  border-collapse: collapse;
+  border: 2px solid white;
+}
+
+.table-root .table-row-even {
+  background-color: white;
+}
+.table-root .table-row-odd {
+  background-color: #e9e9e9;
+}
+.table-root .table-row-even.selected {
+  background-color: #bfddff;
+}
+.table-root .table-row-odd.selected {
+  background-color: #bfddff;
+}
+.table-root tr th {
+  border-bottom: 1px solid gray;
+  opacity: 0.4;
+}
+.table-root tr th,
+td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.table-root .cell-1 {
+  opacity: 0.6;
+}
+.table-root .cell-1 span {
+  padding-right: 1%;
+}
+.table-root .cell-1 select:hover {
+  cursor: pointer;
+}
+.table-root .cell-2 {
+  opacity: 0.6;
+}
+.table-root .cell-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.table-root .cell-3 .chevron-left {
+}
+.table-root .cell-3 .chevron-left:hover {
+  cursor: pointer;
+}
+.table-root .cell-3 .chevron-right {
+}
+.table-root .cell-3 .chevron-right:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+  .table-root {
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
