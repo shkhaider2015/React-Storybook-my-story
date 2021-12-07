@@ -1,0 +1,56 @@
+.btn-root {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color .2s;
+}
+.btn-contained {
+    background-color: #FFBF30;
+}
+.btn-outlined {
+    background-color: #ffffff;
+    border: 1px solid #1B4238;
+    color: #1B4238;
+}
+
+.btn-contained.disable {
+    background-color: #d3b575;
+}
+
+
+.btn-root .btn-icon-root {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.btn-root .btn-icon-root .btn-icon {
+    fill: #000000;
+    width: 14px;
+    height: 12px;
+}
+
+.btn-root .btn-text-root {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.btn-root .btn-text-root .btn-text {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+.btn-contained:hover {
+    background-color: #d18f00;
+    cursor: pointer;
+}
+.btn-contained.disable:hover {
+    background-color: #d3b575;
+    cursor: auto;
+}
+
+.btn-outlined:hover {
+    background-color: #E5E5E5;
+    cursor: pointer;
+}

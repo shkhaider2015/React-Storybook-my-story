@@ -1,0 +1,51 @@
+.simple-nav-root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 8vh;
+    background-color: white;
+}
+.simple-nav-root .simple-nav-left {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 1;
+}
+.simple-nav-root .simple-nav-left .nav-text {
+   padding-left: 5%;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+.simple-nav-root .simple-nav-left .nav-item {
+    display: flex;
+}
+.simple-nav-root .simple-nav-left .nav-item .app-icon {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.simple-nav-root .simple-nav-left .nav-item h1 {
+    margin-top: auto;
+    padding-left: 5px;
+    margin-bottom: auto;
+}
+
+.simple-nav-root .simple-nav-right {
+    color: #000000;
+    padding-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.simple-nav-root .simple-nav-right .cross-icon:hover {
+    cursor: pointer;
+    fill: #0D62E0;
+}
+.simple-nav-root .simple-nav-right:hover {
+    color: #0C847E;
+}
