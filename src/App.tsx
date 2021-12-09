@@ -1,23 +1,27 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import DropDown from './components/Dropdown';
+import { useOnClickOutside } from './Utils/hooks/useOutSideHook';
 
 function App() {
+  const [isPopup, setIsPopup] = useState<boolean>();
+  const pRef = useRef<HTMLDivElement>(null);
+
+ const handleClick = () => {
+  console.log("Click Outside : ")
+  setIsPopup(false)
+ }
+
+useOnClickOutside(pRef, handleClick)
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div style={{ border: '1px solid green' }} ref={pRef} onClick={() => setIsPopup(true) } >Click Me
+        {isPopup && <DropDown  />}
+        </div>
+
       </header>
     </div>
   );
