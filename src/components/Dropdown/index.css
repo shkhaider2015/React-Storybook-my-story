@@ -1,0 +1,9 @@
+.dropdown-root {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-root .element {
+    width: 10%;
+    position: relative;
+}
