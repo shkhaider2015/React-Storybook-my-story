@@ -1,21 +1,9 @@
 .dropdown-root {
     display: flex;
-    flex-direction: column;
-    height: auto;
-    transition: height .3s;
-    position: absolute;
-    animation: rotateMenu 600ms ease-in-out forwards;
-    transform-origin: top center;
+    flex-direction: row;
+}
+.dropdown-root .element {
+    width: 15%;
+    position: relative;
 }
 
-@keyframes rotateMenu {
-    0% {
-        transform: rotateX(-90deg)
-    }
-    70% {
-        transform: rotateX(20deg) 
-    }
-    100% {
-        transform: rotateX(0deg) 
-    }
-}
