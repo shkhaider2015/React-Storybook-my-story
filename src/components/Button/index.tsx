@@ -9,8 +9,6 @@ interface propType {
     outlined?: boolean
 }
 
-
-
 const HaiderButton = ({ text, Icon, onClick, disable, outlined }:propType) => {
 
     return <ButtonWrapper variant={outlined} disabled={disable} >
