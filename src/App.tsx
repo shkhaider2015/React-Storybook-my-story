@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import DropDown from './components/Dropdown';
 import { useOnClickOutside } from './Utils/hooks/useOutSideHook';
+import HaiderButton from './components/Button';
 
 function App() {
   const [isPopup, setIsPopup] = useState<boolean>();
@@ -17,9 +18,9 @@ useOnClickOutside(pRef, handleClick)
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div style={{ border: '1px solid green' }} ref={pRef} onClick={() => setIsPopup(true) } >Click Me
-        {isPopup && <DropDown  />}
+      <header >
+        <div style={{ width: '400px' }} >
+          <HaiderButton text='Click Me' outlined={true} disable={true} onClick={() => ''} />
         </div>
 
       </header>
